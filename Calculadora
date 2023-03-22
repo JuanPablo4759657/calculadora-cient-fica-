@@ -1,0 +1,106 @@
+import math
+
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Error: No se puede dividir por cero"
+    else:
+        return x / y
+
+def power(x, y):
+    return x ** y
+
+def square_root(x):
+    if x < 0:
+        return "Error: No se puede calcular la raíz cuadrada de un número negativo"
+    else:
+        return math.sqrt(x)
+
+def sin(x):
+    return math.sin(x)
+
+def cos(x):
+    return math.cos(x)
+
+def tan(x):
+    return math.tan(x)
+
+def arcsin(x):
+    return math.asin(x)
+
+def arccos(x):
+    return math.acos(x)
+
+def arctan(x):
+    return math.atan(x)
+
+print("Bienvenido a la calculadora científica")
+
+while True:
+    print("Seleccione una operación:")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
+    print("5. Potencia")
+    print("6. Raíz cuadrada")
+    print("7. Seno")
+    print("8. Coseno")
+    print("9. Tangente")
+    print("10. Arco seno")
+    print("11. Arco coseno")
+    print("12. Arco tangente")
+    print("0. Salir")
+
+    choice = input("Ingrese su elección: ")
+
+    if choice == '0':
+        break
+
+    if choice in ('1', '2', '3', '4', '5'):
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+
+        elif choice == '5':
+            print(num1, "^", num2, "=", power(num1, num2))
+
+    elif choice in ('6', '7', '8', '9', '10', '11', '12'):
+        num = float(input("Ingrese el número: "))
+
+        if choice == '6':
+            print("La raíz cuadrada de", num, "es", square_root(num))
+
+        elif choice == '7':
+            print("El seno de", num, "es", sin(num))
+
+        elif choice == '8':
+            print("El coseno de", num, "es", cos(num))
+
+        elif choice == '9':
+            print("La tangente de", num, "es", tan(num))
+
+        elif choice == '10':
+            print("El arco seno de", num, "es", arcsin(num))
+
+        elif choice == '11':
+            print("El arco
